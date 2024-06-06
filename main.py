@@ -2,6 +2,7 @@
 def show_balance():
     print(f"your balance is ${balance:.2f}")
 
+
 def deposit():
     amont = float(input('Enter an amont to be deposited: '))
 
@@ -9,7 +10,8 @@ def deposit():
         print("that's not a valid amount")
         return 0
     else:
-      return amont
+        return amont
+
 
 def withdraw():
     amont = float(input("Enter amont to be withdrawn: "))
@@ -28,23 +30,22 @@ balance = 0
 is_running = True
 
 while is_running:
-  print("Banking Program")
-  print("1.show_balance")
-  print("2. Deposit")
-  print("3. withdraw")
-  print("4. Exit")
+    print("Banking Program")
+    print("1.show_balance")
+    print("2. Deposit")
+    print("3. withdraw")
+    print("4. Exit")
+    choise = input("enter your choise (1-4):")
 
-  choise = input("enter your choise (1-4):")
-
-  if choise == '1':
-    show_balance()
-  elif choise == '2':
-    balance += deposit()
-  elif choise == '3':
-    balance -= withdraw()
-  elif choise == '4':
-    is_running = False
-  else:
-    print('that is not a option here bro ! ')
+    if choise == '1':
+        show_balance()
+    elif choise == '2':
+        balance += deposit()
+    elif choise == '3':
+        balance -= withdraw()
+    elif choise == '4':
+        is_running = False
+    else:
+        print('that is not a option here bro ! ')
 
 print('Thnak you! have a nice day')
